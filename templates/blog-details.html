@@ -3,10 +3,7 @@
 
 {% block title %}<title>Sensive Blog - Blog Details</title>{% endblock title %}
 
-</head>
-
-<body>
-  {% block banner_content %}
+{% block banner_content %}
   <h1>Blog details</h1>
   <nav aria-label="breadcrumb" class="banner-breadcrumb">
     <ol class="breadcrumb">
@@ -14,9 +11,9 @@
       <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
     </ol>
   </nav>
-  {% endblock banner_content %}
+{% endblock banner_content %}
 
-  {% block section %}
+ {% block section %}
   <section class="blog-post-area section-margin">
     <div class="container">
       <div class="row">
@@ -55,15 +52,15 @@
 
           <div class="comments-area">
             <h4>{{ post.comments| length }} Comments</h4>
-            {% for comment in post.comments %}
-            <div class="comment-list">
+           {% for comment in post.comments %}
+             <div class="comment-list">
               <div class="single-comment justify-content-between d-flex">
                 <div class="user justify-content-between d-flex">
                   <div class="desc">
                     <h5><a href="#">{{ comment.author }}</a></h5>
-                    <p class="date">{{ comment.published_at }} </p>
-                    <p class="comment">
-                      {{ comment.text }}
+                     <p class="date">{{ comment.published_at }} </p>
+                     <p class="comment">
+                    {{ comment.text }}
                     </p>
                   </div>
                 </div>
@@ -72,7 +69,7 @@
                 </div>
               </div>
             </div>
-            {% endfor %}
+          {% endfor %}
           </div>
          </div>
 
@@ -100,11 +97,6 @@
           <!-- End Blog Post Siddebar -->
         </div>
       </div>
-  </section>
+   </section>
   <!--================ End Blog Post Area =================-->
-  {% endblock section %}
-
-  <script src="{% static 'scripts.js' %}"></script>
-</body>
-
-</html>
+{% endblock section %}
