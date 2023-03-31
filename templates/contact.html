@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
-  {% block title %}
+{% block title %}
   <title>Sensive Blog - Contact</title>
-  {% endblock title %}
-  {% block banner_content %}
+{% endblock title %}
+{% block banner_content %}
   <h1>Contact Us</h1>
   <nav aria-label="breadcrumb" class="banner-breadcrumb">
     <ol class="breadcrumb">
@@ -11,8 +11,8 @@
       <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
     </ol>
   </nav>
-  {% endblock banner_content %}
-  {% block section %}
+{% endblock banner_content %}
+{% block section %}
   <section class="section-margin--small section-margin">
     <div class="container">
       <div class="d-none d-sm-block mb-5 pb-4"> {{html_map | safe}} </div>
@@ -56,4 +56,4 @@
     </div>
   </section>
   <!-- ================ contact section end ================= -->
-  {% endblock section %}
+{% endblock section %}
